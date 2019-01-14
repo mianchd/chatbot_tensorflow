@@ -29,5 +29,5 @@
 
 See image below
 
-![Alt text](.\static\images\example.jpg "Example Usage")
+![Alt text](https://github.com/mianchd/chatbot_tensorflow/blob/master/static/images/example.jpg?raw=true "Example Usage")
 
