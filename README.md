@@ -25,3 +25,9 @@
 * What is the next date for recyclables?
 * Where should plastic bags go?
 
+
+
+See image below
+
+![Alt text](.\static\images\example.jpg "Example Usage")
+
