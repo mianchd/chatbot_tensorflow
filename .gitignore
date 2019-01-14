@@ -1,0 +1,7 @@
+venv
+
+server_logs
+activate_venv*
+notes*
+
+*.pyc

@@ -1,0 +1,317 @@
+{
+  "rasa_nlu_data": {
+    "lookup_tables": [],
+    "entity_synonyms": [],
+    "regex_features": [],
+    "common_examples": [
+      {
+        "text": "hey",
+        "intent": "greet"
+      },
+      {
+        "text": "hello",
+        "intent": "greet"
+      },
+      {
+        "text": "hi",
+        "intent": "greet"
+      },
+      {
+        "text": "good morning",
+        "intent": "greet"
+      },
+      {
+        "text": "good evening",
+        "intent": "greet"
+      },
+      {
+        "text": "hey there",
+        "intent": "greet"
+      },
+      {
+        "text": "howdy",
+        "intent": "greet"
+      },
+      {
+        "text": "Need information about Waste collection",
+        "intent": "trash_info"
+      },
+      {
+        "text": "what is my next day for trash collection",
+        "intent": "trash_info"
+      },
+      {
+        "text": "How does my trash collection schedule look like?",
+        "intent": "trash_info"
+      },
+      {
+        "text": "when is the next day for garbage collection?",
+        "intent": "trash_info",
+        "entities": [
+          {
+            "start": 25,
+            "value": "garbage",
+            "entity": "trash_type",
+            "end": 32
+          }
+        ]
+      },
+      {
+        "text": "How does the collection schedule look like for recyclables.",
+        "intent": "trash_info",
+        "entities": [
+          {
+            "start": 47,
+            "value": "recyclables",
+            "entity": "trash_type",
+            "end": 58
+          }
+        ]
+      },
+      {
+        "text": "What is the next day for organics?",
+        "intent": "trash_info",
+        "entities": [
+          {
+            "start": 25,
+            "value": "organics",
+            "entity": "trash_type",
+            "end": 33
+          }
+        ]
+      },
+      {
+        "text": "I want to know about yard waste collection.",
+        "intent": "trash_info",
+        "entities": [
+          {
+            "start": 21,
+            "value": "yard waste",
+            "entity": "trash_type",
+            "end": 31
+          }
+        ]
+      },
+      {
+        "text": "Waste schedule?",
+        "intent": "trash_info"
+      },
+      {
+        "text": "Waste collection schedule",
+        "intent": "trash_info"
+      },
+      {
+        "text": "waste collection",
+        "intent": "trash_info"
+      },
+      {
+        "text": "trash collection",
+        "intent": "trash_info"
+      },
+      {
+        "text": "When is the next date for garbage?",
+        "intent": "trash_info",
+        "entities": [
+          {
+            "start": 26,
+            "value": "garbage",
+            "entity": "trash_type",
+            "end": 33
+          }
+        ]
+      },
+      {
+        "text": "next day for yard waste?",
+        "intent": "trash_info",
+        "entities": [
+          {
+            "start": 13,
+            "value": "yard waste",
+            "entity": "trash_type",
+            "end": 23
+          }
+        ]
+      },
+      {
+        "text": "schedule for recyclables?",
+        "intent": "trash_info",
+        "entities": [
+          {
+            "start": 13,
+            "value": "recyclables",
+            "entity": "trash_type",
+            "end": 24
+          }
+        ]
+      },
+      {
+        "text": "next date for organics collection",
+        "intent": "trash_info",
+        "entities": [
+          {
+            "start": 14,
+            "value": "organics",
+            "entity": "trash_type",
+            "end": 22
+          }
+        ]
+      },
+      {
+        "text": "Where do i put plastic bags",
+        "intent": "bin_info",
+        "entities": [
+          {
+            "start": 15,
+            "value": "plastic bags",
+            "entity": "waste_type",
+            "end": 27
+          }
+        ]
+      },
+      {
+        "text": "Which bin should I throw glass bottles in?",
+        "intent": "bin_info",
+        "entities": [
+          {
+            "start": 25,
+            "value": "glass bottles",
+            "entity": "waste_type",
+            "end": 38
+          }
+        ]
+      },
+      {
+        "text": "How do i dispose off egg containers?",
+        "intent": "bin_info",
+        "entities": [
+          {
+            "start": 21,
+            "value": "egg containers",
+            "entity": "waste_type",
+            "end": 35
+          }
+        ]
+      },
+      {
+        "text": "I am not sure where to dispose off chip bags",
+        "intent": "bin_info",
+        "entities": [
+          {
+            "start": 35,
+            "value": "chip bags",
+            "entity": "waste_type",
+            "end": 44
+          }
+        ]
+      },
+      {
+        "text": "Where to throw yogurd container",
+        "intent": "bin_info",
+        "entities": [
+          {
+            "start": 15,
+            "value": "yogurd container",
+            "entity": "waste_type",
+            "end": 31
+          }
+        ]
+      },
+      {
+        "text": "coffee cup lids goes to which bin?",
+        "intent": "bin_info",
+        "entities": [
+          {
+            "start": 0,
+            "value": "coffee cup lids",
+            "entity": "waste_type",
+            "end": 15
+          }
+        ]
+      },
+      {
+        "text": "where would chocolate bar wrappers go?",
+        "intent": "bin_info",
+        "entities": [
+          {
+            "start": 12,
+            "value": "chocolate bar wrappers",
+            "entity": "waste_type",
+            "end": 34
+          }
+        ]
+      },
+      {
+        "text": "I am not sure shopping bags are recyclable.",
+        "intent": "bin_info",
+        "entities": [
+          {
+            "start": 14,
+            "value": "shopping bags",
+            "entity": "waste_type",
+            "end": 27
+          }
+        ]
+      },
+      {
+        "text": "Which bin would i throw candy wrappers in?",
+        "intent": "bin_info",
+        "entities": [
+          {
+            "start": 24,
+            "value": "candy wrappers",
+            "entity": "waste_type",
+            "end": 38
+          }
+        ]
+      },
+      {
+        "text": "Where would baby diapers go?",
+        "intent": "bin_info",
+        "entities": [
+          {
+            "start": 12,
+            "value": "baby diapers",
+            "entity": "waste_type",
+            "end": 24
+          }
+        ]
+      },
+      {
+        "text": "How do I dispose off dog poop?",
+        "intent": "bin_info",
+        "entities": [
+          {
+            "start": 21,
+            "value": "dog poop",
+            "entity": "waste_type",
+            "end": 29
+          }
+        ]
+      },
+      {
+        "text": "thanks!",
+        "intent": "thankyou"
+      },
+      {
+        "text": "thank you",
+        "intent": "thankyou"
+      },
+      {
+        "text": "thx",
+        "intent": "thankyou"
+      },
+      {
+        "text": "thanks very much",
+        "intent": "thankyou"
+      },
+      {
+        "text": "many thanks",
+        "intent": "thankyou"
+      },
+      {
+        "text": "got it. thanks",
+        "intent": "thankyou"
+      }
+    ]
+  }
+}
