@@ -3,10 +3,9 @@
 * Website interface built with HTML, CSS and vanilla JavaScript.
 * Flask Server deployed on Heroku.
 * Chatbot with RASA NLU (tensorflow-sklearn pipeline)
-
 * Configurable for SMS communication with Twilio
 
-
+** Register new address with the message "addr: new_address" such as "addr: 123 Any Street, City" **
 
 ### Functionality
 
@@ -15,6 +14,7 @@
   * Peel Region, Ontario (Implemented)
   * City of Toronto, Ontario (To be completed)
   * York Region, Ontario (To be completed)
+
 
 
 
@@ -29,5 +29,5 @@
 
 See image below
 
-![Alt text](.\static\images\example.jpg "Example Usage")
+![Alt text](https://github.com/mianchd/chatbot_tensorflow/blob/master/static/images/example.jpg?raw=true "Example Usage")
 
