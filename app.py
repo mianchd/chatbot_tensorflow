@@ -105,7 +105,7 @@ def toBullets(list_):
 
 @app.route("/")
 def welcome():
-    return render_template("index.html", msg="msg from python")
+    return render_template("index.html")
 
 
 @app.route("/processText", methods=['POST'])
@@ -127,24 +127,13 @@ def incoming_sms():
     """
 
     body = request.values.get('Body', None)
-    # body = "garbage schedule"
-    if body is not None:
+
+    if body:
         body = body.lower().strip()
+    else:
+        body = "garbage schedule"
 
-    returnString = processUtter(body).replace('<br>', '\n')
-
-    # if isinstance(returnString, list):
-    #     if isinstance(returnString[0], str):
-    #         tempString = '\n\t'
-    #         for i in returnString:
-    #             tempString += ''.join(i) + "\n"
-    #         returnString = tempString
-    #     if isinstance(returnString[0], list):
-    #         tempString = '\n\n'
-    #         for i in returnString[:3]:
-    #             tempString += i[0].decode() + " ==> " + i[1] + "\n"
-    #         returnString = tempString
-
+    returnString = processUtter(body)
     # t.replace('<br>', '\n').replace('<ul>','').replace('</ul>', '').replace('<li>', '').replace('</li>','').replace('<b>','').replace('</b>','')
 
     resp = MessagingResponse()
