@@ -24,6 +24,10 @@ except:
 
 
 def processUtter(utterance):
+    """
+    Function that performs NLU and contains the main logic
+    """
+
     if utterance.lower().startswith('addr:'):
         address = utterance[5:]
         with open('address.db', 'w') as db:
@@ -105,6 +109,9 @@ def toBullets(list_):
 
 @app.route("/")
 def welcome():
+    """
+    Main entry Point
+    """
     return render_template("index.html")
 
 
@@ -131,11 +138,21 @@ def incoming_sms():
     if body:
         body = body.lower().strip()
     else:
-        body = "garbage schedule"
+        body = "garbage schedule" # Used for Testing purposes
 
     sms_response = processUtter(body)
-    sms_response = sms_response.replace('<br>', '\n').replace('<ul>','\n').replace('</ul>', '\n').replace('<li>', '    ').replace('</li>','\n').replace('<b>','').replace('</b>','')
-    # t.replace('<br>', '\n').replace('<ul>','').replace('</ul>', '').replace('<li>', '').replace('</li>','').replace('<b>','').replace('</b>','')
+
+    toReplace = []
+    toReplace.append(['<br>', '\n'])
+    toReplace.append(['<ul>', '\n'])
+    toReplace.append(['</ul>', '\n'])
+    toReplace.append(['<li>', '    '])
+    toReplace.append(['</li>', '\n'])
+    toReplace.append(['<b>', ''])
+    toReplace.append(['</b>', ''])
+
+    for item in toReplace:
+        sms_response = sms_response.replace(item[0], item[1])
 
     resp = MessagingResponse()
     resp.message(sms_response)
@@ -159,6 +176,10 @@ def getInfo():
 
 
 def initiate_logger():
+    """
+    logging configuration and initialisation
+    """
+
     import time
     import logging
 
@@ -179,11 +200,11 @@ def initiate_logger():
 
     """
     CRITICAL    50
-    ERROR        40
-    WARNING        30
+    ERROR       40
+    WARNING     30
     INFO        20
-    DEBUG        10
-    NOTSET        0
+    DEBUG       10
+    NOTSET      0
     """
 
     global logger
