@@ -23,18 +23,7 @@ except:
     logger.error("couldn't load address, check address.db")
 
 
-@app.route("/")
-def welcome():
-    return render_template("index.html", msg="msg from python")
-
-
-@app.route("/processText", methods=['POST'])
-def processText():
-    """
-    Primary function used for NLU
-    """
-    utterance = request.form['utterance']
-
+def processUtter(utterance):
     if utterance.lower().startswith('addr:'):
         address = utterance[5:]
         with open('address.db', 'w') as db:
@@ -114,6 +103,18 @@ def toBullets(list_):
     logger.info(tempString)
     return tempString
 
+@app.route("/")
+def welcome():
+    return render_template("index.html", msg="msg from python")
+
+
+@app.route("/processText", methods=['POST'])
+def processText():
+    """
+    Primary function used receiving post calls from web
+    """
+    utterance = request.form['utterance']
+    return processUtter(utterance)
 
 @app.route('/talk')
 def incoming_sms():
@@ -124,24 +125,27 @@ def incoming_sms():
     Implement dictionary structure, with sucess, data, params etc
 
     """
-    body = request.values.get('Body', None)
 
+    body = request.values.get('Body', None)
+    # body = "garbage schedule"
     if body is not None:
         body = body.lower().strip()
 
-    returnString = processText(body)
+    returnString = processUtter(body).replace('<br>', '\n')
 
-    if isinstance(returnString, list):
-        if isinstance(returnString[0], str):
-            tempString = '\n\t'
-            for i in returnString:
-                tempString += ''.join(i) + "\n"
-            returnString = tempString
-        if isinstance(returnString[0], list):
-            tempString = '\n\n'
-            for i in returnString[:3]:
-                tempString += i[0].decode() + " ==> " + i[1] + "\n"
-            returnString = tempString
+    # if isinstance(returnString, list):
+    #     if isinstance(returnString[0], str):
+    #         tempString = '\n\t'
+    #         for i in returnString:
+    #             tempString += ''.join(i) + "\n"
+    #         returnString = tempString
+    #     if isinstance(returnString[0], list):
+    #         tempString = '\n\n'
+    #         for i in returnString[:3]:
+    #             tempString += i[0].decode() + " ==> " + i[1] + "\n"
+    #         returnString = tempString
+
+    # t.replace('<br>', '\n').replace('<ul>','').replace('</ul>', '').replace('<li>', '').replace('</li>','').replace('<b>','').replace('</b>','')
 
     resp = MessagingResponse()
     resp.message(returnString)
