@@ -1,317 +1,317 @@
 {
   "rasa_nlu_data": {
-    "lookup_tables": [],
-    "entity_synonyms": [],
-    "regex_features": [],
     "common_examples": [
       {
-        "text": "hey",
-        "intent": "greet"
+        "intent": "greet",
+        "text": "hey"
       },
       {
-        "text": "hello",
-        "intent": "greet"
+        "intent": "greet",
+        "text": "hello"
       },
       {
-        "text": "hi",
-        "intent": "greet"
+        "intent": "greet",
+        "text": "hi"
       },
       {
-        "text": "good morning",
-        "intent": "greet"
+        "intent": "greet",
+        "text": "good morning"
       },
       {
-        "text": "good evening",
-        "intent": "greet"
+        "intent": "greet",
+        "text": "good evening"
       },
       {
-        "text": "hey there",
-        "intent": "greet"
+        "intent": "greet",
+        "text": "hey there"
       },
       {
-        "text": "howdy",
-        "intent": "greet"
+        "intent": "greet",
+        "text": "howdy"
       },
       {
-        "text": "Need information about Waste collection",
-        "intent": "trash_info"
+        "intent": "trash_info",
+        "text": "Need information about Waste collection"
       },
       {
-        "text": "what is my next day for trash collection",
-        "intent": "trash_info"
+        "intent": "trash_info",
+        "text": "what is my next day for trash collection"
       },
       {
-        "text": "How does my trash collection schedule look like?",
-        "intent": "trash_info"
+        "intent": "trash_info",
+        "text": "How does my trash collection schedule look like?"
       },
       {
-        "text": "when is the next day for garbage collection?",
         "intent": "trash_info",
         "entities": [
           {
             "start": 25,
+            "end": 32,
             "value": "garbage",
-            "entity": "trash_type",
-            "end": 32
+            "entity": "trash_type"
           }
-        ]
+        ],
+        "text": "when is the next day for garbage collection?"
       },
       {
-        "text": "How does the collection schedule look like for recyclables.",
         "intent": "trash_info",
         "entities": [
           {
             "start": 47,
+            "end": 58,
             "value": "recyclables",
-            "entity": "trash_type",
-            "end": 58
+            "entity": "trash_type"
           }
-        ]
+        ],
+        "text": "How does the collection schedule look like for recyclables."
       },
       {
-        "text": "What is the next day for organics?",
         "intent": "trash_info",
         "entities": [
           {
             "start": 25,
+            "end": 33,
             "value": "organics",
-            "entity": "trash_type",
-            "end": 33
+            "entity": "trash_type"
           }
-        ]
+        ],
+        "text": "What is the next day for organics?"
       },
       {
-        "text": "I want to know about yard waste collection.",
         "intent": "trash_info",
         "entities": [
           {
             "start": 21,
+            "end": 31,
             "value": "yard waste",
-            "entity": "trash_type",
-            "end": 31
+            "entity": "trash_type"
           }
-        ]
+        ],
+        "text": "I want to know about yard waste collection."
       },
       {
-        "text": "Waste schedule?",
-        "intent": "trash_info"
+        "intent": "trash_info",
+        "text": "Waste schedule?"
       },
       {
-        "text": "Waste collection schedule",
-        "intent": "trash_info"
+        "intent": "trash_info",
+        "text": "Waste collection schedule"
       },
       {
-        "text": "waste collection",
-        "intent": "trash_info"
+        "intent": "trash_info",
+        "text": "waste collection"
       },
       {
-        "text": "trash collection",
-        "intent": "trash_info"
+        "intent": "trash_info",
+        "text": "trash collection"
       },
       {
-        "text": "When is the next date for garbage?",
         "intent": "trash_info",
         "entities": [
           {
             "start": 26,
+            "end": 33,
             "value": "garbage",
-            "entity": "trash_type",
-            "end": 33
+            "entity": "trash_type"
           }
-        ]
+        ],
+        "text": "When is the next date for garbage?"
       },
       {
-        "text": "next day for yard waste?",
         "intent": "trash_info",
         "entities": [
           {
             "start": 13,
+            "end": 23,
             "value": "yard waste",
-            "entity": "trash_type",
-            "end": 23
+            "entity": "trash_type"
           }
-        ]
+        ],
+        "text": "next day for yard waste?"
       },
       {
-        "text": "schedule for recyclables?",
         "intent": "trash_info",
         "entities": [
           {
             "start": 13,
+            "end": 24,
             "value": "recyclables",
-            "entity": "trash_type",
-            "end": 24
+            "entity": "trash_type"
           }
-        ]
+        ],
+        "text": "schedule for recyclables?"
       },
       {
-        "text": "next date for organics collection",
         "intent": "trash_info",
         "entities": [
           {
             "start": 14,
+            "end": 22,
             "value": "organics",
-            "entity": "trash_type",
-            "end": 22
+            "entity": "trash_type"
           }
-        ]
+        ],
+        "text": "next date for organics collection"
       },
       {
-        "text": "Where do i put plastic bags",
         "intent": "bin_info",
         "entities": [
           {
             "start": 15,
+            "end": 27,
             "value": "plastic bags",
-            "entity": "waste_type",
-            "end": 27
+            "entity": "waste_type"
           }
-        ]
+        ],
+        "text": "Where do i put plastic bags"
       },
       {
-        "text": "Which bin should I throw glass bottles in?",
         "intent": "bin_info",
         "entities": [
           {
             "start": 25,
+            "end": 38,
             "value": "glass bottles",
-            "entity": "waste_type",
-            "end": 38
+            "entity": "waste_type"
           }
-        ]
+        ],
+        "text": "Which bin should I throw glass bottles in?"
       },
       {
-        "text": "How do i dispose off egg containers?",
         "intent": "bin_info",
         "entities": [
           {
             "start": 21,
+            "end": 35,
             "value": "egg containers",
-            "entity": "waste_type",
-            "end": 35
+            "entity": "waste_type"
           }
-        ]
+        ],
+        "text": "How do i dispose off egg containers?"
       },
       {
-        "text": "I am not sure where to dispose off chip bags",
         "intent": "bin_info",
         "entities": [
           {
             "start": 35,
+            "end": 44,
             "value": "chip bags",
-            "entity": "waste_type",
-            "end": 44
+            "entity": "waste_type"
           }
-        ]
+        ],
+        "text": "I am not sure where to dispose off chip bags"
       },
       {
-        "text": "Where to throw yogurd container",
         "intent": "bin_info",
         "entities": [
           {
             "start": 15,
+            "end": 31,
             "value": "yogurd container",
-            "entity": "waste_type",
-            "end": 31
+            "entity": "waste_type"
           }
-        ]
+        ],
+        "text": "Where to throw yogurd container"
       },
       {
-        "text": "coffee cup lids goes to which bin?",
         "intent": "bin_info",
         "entities": [
           {
             "start": 0,
+            "end": 15,
             "value": "coffee cup lids",
-            "entity": "waste_type",
-            "end": 15
+            "entity": "waste_type"
           }
-        ]
+        ],
+        "text": "coffee cup lids goes to which bin?"
       },
       {
-        "text": "where would chocolate bar wrappers go?",
         "intent": "bin_info",
         "entities": [
           {
             "start": 12,
+            "end": 34,
             "value": "chocolate bar wrappers",
-            "entity": "waste_type",
-            "end": 34
+            "entity": "waste_type"
           }
-        ]
+        ],
+        "text": "where would chocolate bar wrappers go?"
       },
       {
-        "text": "I am not sure shopping bags are recyclable.",
         "intent": "bin_info",
         "entities": [
           {
             "start": 14,
+            "end": 27,
             "value": "shopping bags",
-            "entity": "waste_type",
-            "end": 27
+            "entity": "waste_type"
           }
-        ]
+        ],
+        "text": "I am not sure shopping bags are recyclable."
       },
       {
-        "text": "Which bin would i throw candy wrappers in?",
         "intent": "bin_info",
         "entities": [
           {
             "start": 24,
+            "end": 38,
             "value": "candy wrappers",
-            "entity": "waste_type",
-            "end": 38
+            "entity": "waste_type"
           }
-        ]
+        ],
+        "text": "Which bin would i throw candy wrappers in?"
       },
       {
-        "text": "Where would baby diapers go?",
         "intent": "bin_info",
         "entities": [
           {
             "start": 12,
+            "end": 24,
             "value": "baby diapers",
-            "entity": "waste_type",
-            "end": 24
+            "entity": "waste_type"
           }
-        ]
+        ],
+        "text": "Where would baby diapers go?"
       },
       {
-        "text": "How do I dispose off dog poop?",
         "intent": "bin_info",
         "entities": [
           {
             "start": 21,
+            "end": 29,
             "value": "dog poop",
-            "entity": "waste_type",
-            "end": 29
+            "entity": "waste_type"
           }
-        ]
+        ],
+        "text": "How do I dispose off dog poop?"
       },
       {
-        "text": "thanks!",
-        "intent": "thankyou"
+        "intent": "thankyou",
+        "text": "thanks!"
       },
       {
-        "text": "thank you",
-        "intent": "thankyou"
+        "intent": "thankyou",
+        "text": "thank you"
       },
       {
-        "text": "thx",
-        "intent": "thankyou"
+        "intent": "thankyou",
+        "text": "thx"
       },
       {
-        "text": "thanks very much",
-        "intent": "thankyou"
+        "intent": "thankyou",
+        "text": "thanks very much"
       },
       {
-        "text": "many thanks",
-        "intent": "thankyou"
+        "intent": "thankyou",
+        "text": "many thanks"
       },
       {
-        "text": "got it. thanks",
-        "intent": "thankyou"
+        "intent": "thankyou",
+        "text": "got it. thanks"
       }
-    ]
+    ],
+    "regex_features": [],
+    "lookup_tables": [],
+    "entity_synonyms": []
   }
 }

@@ -13,6 +13,15 @@ os.environ['TF_CPP_MIN_LOG_LEVEL'] = '2'
 interpreter = Interpreter.load("./rasa/models/current/nlu")
 app = Flask(__name__)
 
+try:
+    with open("address.db", "r") as db:
+        dbString = db.read()
+        dbJson = json.loads(dbString)
+        myAddr = dbJson['current']
+        #logger.info("current address is ==> {}".format(myAddr))
+except:
+    logger.error("couldn't load address, check address.db")
+
 
 @app.route("/")
 def welcome():
@@ -187,17 +196,7 @@ def initiate_logger():
     logger = logging.getLogger(__name__)
     logger.setLevel(logging.DEBUG)
 
+initiate_logger()
 
 if __name__ == "__main__":
-    initiate_logger()
-
-    try:
-        with open("address.db", "r") as db:
-            dbString = db.read()
-            dbJson = json.loads(dbString)
-            myAddr = dbJson['current']
-            logger.info("current address is ==> {}".format(myAddr))
-    except:
-        logger.error("couldn't load address, check address.db")
-
     app.run(debug=True)

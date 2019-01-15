@@ -1,5 +1,6 @@
-venv
+venv*
 runtime.txt
+
 server_logs
 activate_venv*
 notes*

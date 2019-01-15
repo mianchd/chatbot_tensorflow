@@ -1,0 +1,7 @@
+﻿bs4
+Flask
+gunicorn
+requests
+rasa_nlu[tensorflow]
+lxml
+twilio

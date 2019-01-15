@@ -1,2 +1,2 @@
-model_checkpoint_path: "C:\\Users\\miashah\\Documents\\Python Projects\\garbage-chatter\\rasa\\models\\current\\nlu\\intent_classifier_tensorflow_embedding.ckpt"
-all_model_checkpoint_paths: "C:\\Users\\miashah\\Documents\\Python Projects\\garbage-chatter\\rasa\\models\\current\\nlu\\intent_classifier_tensorflow_embedding.ckpt"
+model_checkpoint_path: "C:\\Users\\miashah\\Documents\\Python_Projects\\garbage-chatter\\rasa\\models\\current\\nlu\\intent_classifier_tensorflow_embedding.ckpt"
+all_model_checkpoint_paths: "C:\\Users\\miashah\\Documents\\Python_Projects\\garbage-chatter\\rasa\\models\\current\\nlu\\intent_classifier_tensorflow_embedding.ckpt"
