@@ -133,11 +133,12 @@ def incoming_sms():
     else:
         body = "garbage schedule"
 
-    returnString = processUtter(body)
+    sms_response = processUtter(body)
+    sms_response = sms_response.replace('<br>', '%0a').replace('<ul>','%0a').replace('</ul>', '').replace('<li>', '    ').replace('</li>','').replace('<b>','').replace('</b>','')
     # t.replace('<br>', '\n').replace('<ul>','').replace('</ul>', '').replace('<li>', '').replace('</li>','').replace('<b>','').replace('</b>','')
 
     resp = MessagingResponse()
-    resp.message(returnString)
+    resp.message(sms_response)
     return str(resp)
 
 
